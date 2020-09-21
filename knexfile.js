@@ -1,29 +1,30 @@
 // Update with your config settings.
+require('dotenv').config();
 
 module.exports = {
 
   development: {
-    client: 'pg',
+    client: process.env.DB_CLIENT,
     connection: {
-      host: '127.0.0.1',
-      user: 'postgres',
-      password: 'Viktorpp123!',
-      database: 'pollapp'
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_DATABASE
     },
     migrations: {
       directory: './db/migrations'
     },
-    debug: false
+    debug: process.env.DB_DEBUG
   },
 
   production: {
-    client: 'pg',
+    client: process.env.DB_CLIENT,
     connection: {
-      host: '127.0.0.1',
-      user: 'postgres',
-      password: 'Viktorpp123!',
-      database: 'pollapp'
-    }
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_DATABASE
+    },
   }
 
 };
