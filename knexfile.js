@@ -15,6 +15,10 @@ module.exports = {
     migrations: {
       directory: './db/migrations'
     },
+    pool: {
+      min: 2,
+      max: 10
+    },
     debug: process.env.DB_DEBUG
   },
 
@@ -26,7 +30,11 @@ module.exports = {
       password: process.env.DB_PASSWORD,
       database: process.env.DB_DATABASE,
       port: process.env.DB_PORT
-    }
+    },
+    pool: {
+      min: 2,
+      max: 10
+    },
   }
 
 };
