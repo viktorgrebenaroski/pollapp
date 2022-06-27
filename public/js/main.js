@@ -15,7 +15,7 @@ const submitForm = () => {
       });
       pollForm.parentNode.removeChild(pollForm);
     } else {
-      emptyFields++;
+      ++emptyFields;
     }
   });
   if(emptyFields > 0) {
