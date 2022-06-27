@@ -6,7 +6,7 @@ Tech:
 
 - Vanilla JavaScript
 
-- PostgreSQL,
+- PostgreSQL
 
 - Knex & Objection.JS
 
