@@ -118,7 +118,6 @@ if (pollId) {
 }
 
 socket.on('pollSet', (poll) => {
-  console.log(poll);
   // Poll Form
   const pollForm = document.createElement('form');
   pollForm.setAttribute('id', 'pollForm');
@@ -169,7 +168,6 @@ socket.on('createPoll', (res) => {
   window.location.href = `?p=${res}`;
 });
 socket.on('pollStats', (stats) => {
-  console.log(stats);
   const bars = document.querySelectorAll('.progress-bar');
   if(bars) {
     for(let i = 0; i < stats.allAnswers; i++) {
